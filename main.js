@@ -1,11 +1,41 @@
+/* Coding Categories in Header */
+const categoryBtn = document.querySelector('.category-btn');
+const categories = document.querySelector('.categories');
 
+categoryBtn.addEventListener('click', () => {
+	categoryBtn.classList.toggle('on');
+	categories.classList.toggle('on');
+});
+
+const menubar = document.querySelector('.menu-bar');
+const menubarActivity = document.querySelector('header .sm-navbar');
+
+menubar.addEventListener('click', () => {
+	menubarActivity.classList.toggle('on');
+});
+
+/*  */ 
+
+const dropdownHeaders = document.querySelectorAll('span.dropdown-header');
+const innerHeaders = document.querySelectorAll('.inner-header');
+
+dropdownHeaders.forEach(header => {
+	header.addEventListener('click', () => {
+		header.classList.toggle('on');
+	});
+});
+innerHeaders.forEach(header => {
+	header.addEventListener('click', () => {
+		header.classList.toggle('on');
+	})
+});
 
 /* Coding For Slides in the Landing */
 const slides = document.querySelectorAll('.slider .slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const intervalTime = 4000;
-let auto = false;
+let auto = true;
 let slideInterval;
 
 const nextSlide = () => {
