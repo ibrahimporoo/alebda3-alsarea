@@ -224,6 +224,7 @@ header .categories .category-item a {
 	transition: .3s;
 	margin-bottom: 10px;
 	overflow: hidden;
+	position: relative;
 }
 
 header .categories .category-item a::before {
