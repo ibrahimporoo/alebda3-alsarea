@@ -1,0 +1,337 @@
+/* Start Global Rule */
+:root {
+	--main-color: #42b983;
+	--blue-color: #5e2dc1;
+	--orange-color: #fc5f12;
+	--simple-color: #737373;
+	--dark-blue-color: #1f1b2d;
+	--navbar-color: rgba(255, 255, 255, 0.65);
+	--font-family-inter: 'Inter', sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	/* font-family: 'Inter', sans-serif; */
+	font-family: 'Noto Sans', sans-serif;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+/* Medium */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+/* large */
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+/* Strat My Components */
+.read-more {
+	background-color: var(--orange-color);
+	padding: 14px 18px;
+	font-size: 16px;
+	border-radius: 6px;
+	color: white;
+}
+/* End My Components */
+/* Start Header */
+header {
+	/* box-shadow: 2px 2px 20px rgb(0 0 0 / 20%); */
+	background-color: var(--dark-blue-color);
+	height: 190px;
+}
+
+header .site-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+header .site-info .logo {
+	max-width: 100px
+}
+
+header .site-info .logo img {
+	width: 100%;
+}
+
+header .site-info .global-infos {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+header .site-info .social-icons {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+header .site-info .social-icons li a {
+	color: var(--simple-color);
+	transition: .3s;
+}
+
+header .site-info .social-icons li a:hover {
+	color: #fff;
+	transform: scale(1.08);
+}
+
+header .site-info .social-icons li a:hover i {
+	transform: scale(1.08);
+}
+
+header .site-info .categories {
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--navbar-color);
+	transition: .3s;
+}
+
+header .site-info .categories:hover,
+header .site-info .categories.on {
+	color: #fff;
+}
+
+header .site-info .categories i {
+	font-size: 11px;
+}
+
+header .site-info .langs {
+	color: var(--simple-color);
+	transition: .3s;
+}
+
+header .site-info .langs:hover {
+	color: white;
+}
+
+header .navbar .navs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+header .navs > li {
+	/* font-size: 13px; */
+	padding: 20px 10px;
+	position: relative;
+}
+
+header .navs li a,
+header .navs li i {
+	color: var(--navbar-color);
+	transition: .3s;
+	white-space: nowrap;
+	font-weight: bold;
+    font-size: 12px;
+}
+
+header .navs li a:hover,
+header .navs li a:hover i,
+header .navs li a:hover + i {
+	color: #fff;
+}
+
+header .navs .dropdown .dropdown-items {
+	position: absolute;
+	top: calc(100% + 22px);
+	left: 0;
+	background-color: var(--dark-blue-color);
+	min-width: 100px;
+	padding: 16px 14px;
+	border-radius: 6px;
+	border: 1px solid var(--orange-color);
+	opacity: 0;
+	z-index: -1;
+	transition: .3s;
+}
+
+header .navs .dropdown .dropdown-items li:hover > a,
+header .navs .dropdown .dropdown-items li:hover > i {
+	color: #fff;
+}
+
+header .navs .dropdown.on > .dropdown-items,
+header .navs .dropdown:hover > .dropdown-items {
+	opacity: 1;
+	z-index: 1000;
+	top: calc(100% - 2px);
+}
+
+header .navs .dropdown .dropdown-items .added-dropdown {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	gap: 12px;
+}
+
+header .dropdown-items .added-dropdown .in-added {
+	position: absolute;
+	left: calc(100% + 14px);
+	top: 10px;
+	opacity: 0;
+	z-index: -1;
+}
+
+header .navs .dropdown .dropdown-items .added-dropdown:hover i {
+	transform: rotate(45deg);
+}
+
+header .navs .dropdown .dropdown-items .added-dropdown:hover .in-added {
+	opacity: 1;
+	z-index: 1000;
+}
+
+header .navs .dropdown .dropdown-items li:not(:last-child) {
+	padding: 5px 0;
+}
+
+/* End Header */
+/* Start Landing or Slider  */
+.landing {
+	height: calc(100vh - 190px);
+	width: 100vw;
+	position: relative;
+	background-color: var(--dark-blue-color);
+}
+
+/* Grayscale */
+.slider .slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .4s ease-in-out;
+}
+
+.slider .slide::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0 0 0 / 40%);
+}
+
+.slider .slide.current {
+	opacity: 1;
+}
+/* Background Images */
+.slider .slide:first-child {
+	background: var(--dark-blue-color) url(http://www.alebdaalsarea.com/safety/wp-content/uploads/2020/02/slider1.jpeg) no-repeat center center/cover;
+}
+
+.slider .slide:nth-child(2) {
+	background: var(--dark-blue-color) url(http://www.alebdaalsarea.com/safety/wp-content/uploads/2020/03/shutterstock_625194191.jpg) no-repeat center center/cover;
+}
+
+.slider .slide:nth-child(3) {
+	background: var(--dark-blue-color) url(http://www.alebdaalsarea.com/safety/wp-content/uploads/2020/03/thiet-ke-pccc.jpg) no-repeat center center/cover;
+}
+
+.slider .slide:nth-child(4) {
+	background: var(--dark-blue-color) url(http://www.alebdaalsarea.com/safety/wp-content/uploads/2020/03/shutterstock_625194191.jpg) no-repeat center center/cover;
+}
+
+.slider .slide .text {
+	position: absolute;
+	top: calc(50% + 100px);
+	z-index: 20;
+	max-width: 550px;
+	padding: 0 40px;
+	line-height: 1.6;
+	color: white;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+
+.slider .slide.current .text {
+	transform: translateY(calc(-50% - 100px));
+	opacity: 1;
+	transition: all .6s ease-in-out;
+}
+
+.slider .slide .text h2 {
+	font-size: 40px;
+}
+
+.slider .slide .text p {
+	margin-block: 20px;
+	font-size: 18px;
+}
+
+.slider .btns {
+	position: absolute;
+	bottom: 150px;
+	right: 150px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.slider .btns button {
+	background-color: var(--navbar-color);
+	color: var(--orange-color);
+	border: 4px solid var(--orange-color);
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .2s;
+}
+
+.slider .btns button:hover {
+	opacity: .7;
+}
+
+.slider .btns button i {
+	font-size: 27px;
+}
+
+/* .slider .btns #prev */
+
+
+/* End Landing or Slider */
