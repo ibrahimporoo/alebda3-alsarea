@@ -35,8 +35,8 @@ innerHeaders.forEach(header => {
 const slides = document.querySelectorAll('.slider .slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
-const intervalTime = 4000;
-let auto = false;
+const intervalTime = 5000;
+let auto = true;
 let slideInterval;
 
 const nextSlide = () => {
