@@ -551,6 +551,7 @@ header .sm-navbar {
 .slider .slide .text {
 	position: absolute;
 	top: calc(50% + 100px);
+	max-width: 580px;
 	z-index: 20;
 	max-width: 550px;
 	padding: 0 40px;
