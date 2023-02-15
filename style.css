@@ -207,7 +207,7 @@ header .categories {
 }
 
 header .categories.on {
-	top: calc(100% + 2px);
+	top: 100%;
 	opacity: 1;
 	z-index: 200000;
 }
@@ -277,7 +277,7 @@ header .category-item .category-infos p {
 
 @media (max-width : 555px) {
 	header {
-		height: 77px;
+		height: 110px;
 	}
 	header .category-item .category-infos h3 {
 		font-size: 15px;
@@ -401,11 +401,16 @@ header .navs .dropdown .dropdown-items li:not(:last-child) {
 	padding: 5px 0;
 }
 
+header .sm-navbar {
+	display: none;
+}
+
 @media (max-width: 992px) {
 	header .navbar {
 		display: none;
 	}
 	header .sm-navbar {
+		display: block;
 		position: absolute;
     width: 100%;
     background-color: var(--light-dark-blue-color);
@@ -498,7 +503,7 @@ header .navs .dropdown .dropdown-items li:not(:last-child) {
 
 @media (max-width: 555px) {
 	.landing {
-    height: calc(100vh - 77px);
+    height: calc(100vh - 110px);
 	}
 }
 
@@ -627,9 +632,10 @@ header .navs .dropdown .dropdown-items li:not(:last-child) {
 	}
 	.slider .slide.current .text {
 		top: calc(50%);
+		padding: 0 14px;
 	}
 	.slider .slide .text h2 {
-    font-size: 27px;
+    font-size: calc(34px + .2vw);
 	}
 	.slider .slide .text p {
     font-size: 14px;
