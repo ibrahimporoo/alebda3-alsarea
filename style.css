@@ -125,7 +125,19 @@ header .site-info .global-infos .menu-bar {
 	header .site-info .global-infos .menu-bar i {
 		color: var(--orange-color);
 		padding: 5px 10px;
-		font-size: 20px;
+		font-size: 23px;
+	}
+	header .site-info .global-infos .menu-bar i.close {
+		display: none;
+	}
+	header .site-info .global-infos .menu-bar.on i.close {
+		display: inline-block;
+	}
+	header .site-info .global-infos .menu-bar.on i.bars {
+		display: none;
+	}
+	header {
+    height: 126px;
 	}
 }
 
@@ -264,6 +276,9 @@ header .category-item .category-infos p {
 }
 
 @media (max-width : 555px) {
+	header {
+		height: 77px;
+	}
 	header .category-item .category-infos h3 {
 		font-size: 15px;
 	}
@@ -475,6 +490,18 @@ header .navs .dropdown .dropdown-items li:not(:last-child) {
 	background-color: var(--dark-blue-color);
 }
 
+@media (max-width: 992px) {
+	.landing {
+    height: calc(100vh - 126px);
+	}
+}
+
+@media (max-width: 555px) {
+	.landing {
+    height: calc(100vh - 77px);
+	}
+}
+
 /* Grayscale */
 .slider .slide {
 	position: absolute;
@@ -595,6 +622,12 @@ header .navs .dropdown .dropdown-items li:not(:last-child) {
 	}
 }
 @media (max-width: 555px) {
+	.slider .slide .text {
+		top: calc(50% - 30px);
+	}
+	.slider .slide.current .text {
+		top: calc(50%);
+	}
 	.slider .slide .text h2 {
     font-size: 27px;
 	}

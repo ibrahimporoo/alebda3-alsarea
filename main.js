@@ -11,6 +11,7 @@ const menubar = document.querySelector('.menu-bar');
 const menubarActivity = document.querySelector('header .sm-navbar');
 
 menubar.addEventListener('click', () => {
+	menubar.classList.toggle('on');
 	menubarActivity.classList.toggle('on');
 });
 
@@ -35,7 +36,7 @@ const slides = document.querySelectorAll('.slider .slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const intervalTime = 4000;
-let auto = true;
+let auto = false;
 let slideInterval;
 
 const nextSlide = () => {
